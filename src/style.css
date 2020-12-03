@@ -5,7 +5,8 @@
 }
 
 body {
-	max-width: 70vw;
+	max-width: 60vw;
+	min-width: 440px;
 	margin: 0 auto;
 	background-color: #fdf5e6;
 	text-align: center;
@@ -43,6 +44,19 @@ h1 {
 	cursor: pointer;
 }
 
+.content-card {
+	box-sizing: border-box;
+	padding: 20px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+	border-radius: 20px;
+	margin: 20px;
+}
+
+.content-card > h3,
+p {
+	padding: 5px;
+}
+
 @media (min-width: 786px) {
 	.search-box {
 		margin: 20px;
@@ -52,5 +66,19 @@ h1 {
 
 	.search-box-button {
 		margin-left: 10px;
+	}
+	.content-card {
+		display: grid;
+		grid-template-columns: 1fr 2fr auto;
+		gap: 10px;
+	}
+
+	.content-card-content {
+		text-align: left;
+		align-content: center;
+	}
+
+	.content-card-image {
+		text-align: right;
 	}
 }
